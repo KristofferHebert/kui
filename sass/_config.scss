@@ -1,0 +1,40 @@
+/* ==========================================================================
+   VARIABLES
+   ========================================================================== */
+
+// Colors
+$color-primary: #0088cc;
+$color-primary-dark: darken($color-primary, 25%);
+$color-primary-light: lighten($color-primary, 25%);
+$color-secondary: #0044cc;
+$color-secondary-dark: darken($color-secondary, 25%);
+$color-secondary-light: lighten($color-secondary, 25%);
+
+$color-success: #377f31; // Green
+$color-danger: #880e14; // Red
+$color-warning: #dba909; // Yellow
+
+$color-black: #272727;
+$color-white: #ffffff;
+$color-gray-dark: #808080;
+$color-gray-light: #e5e5e5;
+
+// Font Stacks
+$font-primary: "Helvetica Neue", Arial, sans-serif;
+$font-secondary: Georgia, Times, serif;
+
+$font-size-base: 100%;
+$spacing: 1.5625em;
+$container-max-width: calc-em(1024px);
+$grid-margins: 1.4%;
+$grid-sizes: (
+  fourth 25%,
+  third 33.33333333333%,
+  half 50%,
+  two-thirds 66.666666666667%,
+  three-fourths 75%,
+  full 100%
+);
+
+
+$radius: calc-em(5px);

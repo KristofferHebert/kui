@@ -1,7 +1,6 @@
 /* ==========================================================================
    Site styles
    ========================================================================== */
-
 /* ==========================================================================
    Media Queries
 
@@ -10,24 +9,34 @@
    - Large
    ========================================================================== */
 
+.logo {
+    @extend .mb0;
+    @extend .pt0;
+}
+.logo a {
+    @extend .hidetext;
+    background: url('../images/logo.png') no-repeat;
+    background-size: cover;
+}
+
+.main-footer {
+  background: $color-black;
+  color: $color-white;
+}
 
 /* Medium and Up - Targets everything larger than mobile
    ========================================================================== */
 
 @include break(medium-and-large) {
-
+    .logo {
+        @extend .fl;
+    }
 }
-
-/* Medium - only targets 1st breakpoint. Styles 
+/* Medium - only targets 1st breakpoint. Styles
    ========================================================================== */
 
-@include break(medium) {
-
-}
-
-/* Large - only targets 2nd breakpoint. 
+@include break(medium) {}
+/* Large - only targets 2nd breakpoint.
    ========================================================================== */
 
-@include break(large) {
-
-}
+@include break(large) {}

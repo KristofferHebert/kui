@@ -3,24 +3,158 @@
    - Copy
    - Type Scale
    ========================================================================== */
-
 /* Copy ========================================================================== */
 
-.intro {      font-size: 32px; }
-blockquote {  font-size: 32px; }
-p {           font-size: 20px; }
+body {
+    font-family: $font-primary;
+    font-size: $font-size-base;
+    line-height: 1.5;
+    color: $color-black;
+    background: $color-white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+p {
+    font-size: calc-em(18px);
+    margin: 0 0 $spacing;
+}
+a, a:visited {
+    color: $color-primary;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+a:hover, a:focus, a:active {
+    color: darken( $color-primary, 15%);
+    text-decoration: underline;
+}
 
+a:hover img {
+  border: none;
+  background: none;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+
+/**
+ * List styling
+ */
+
+ul,
+ol,
+dl {
+  margin-bottom: $spacing;
+  margin-left: calc-em(32px);
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  margin-left: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+.list-unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+.list-inline {
+  list-style: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+.list-inline > li, .main-nav li {
+  display: inline-block;
+  margin-right: calc-em(8px);
+}
 
 
 /* Type Scale
    ========================================================================== */
 
-h1,.f1 {      font-size: 64px; }
-h2,.f2 {      font-size: 48px; }
-h3,.f3 {      font-size: 32px; }
-h4,.f4 {      font-size: 24px; }
-h5,.f5 {      font-size: 20px; }
-h6,.f6 {      font-size: 16px; }
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-secondary;
+    line-height: 1.2;
+    font-weight: normal;
+    margin: 0 0 1em;
+    padding: 1em 0 0;
+    word-wrap: break-word;
+}
+h1, .f1 {
+    padding-top: .4em;
+    font-size: calc-em(48px);
+}
+h2, .f2, h3, .f3{
+    font-size: calc-em(32px);
+    margin-bottom: .4em;
+}
+h3, .f3 {
+    font-size: calc-em(24px);
+}
+h3, .f3, h4, .f4, h5, .f5 {
+    margin-bottom: .1em;
+}
+h4, .f4, h5, .f5 {
+    font-size: calc-em(22px);
+}
 
-small, .small {       font-size: 12px; }
-
+small, .small {
+    font-size: calc-em(16px);
+}
+hr {
+    margin: calc-em(20px) auto;
+    border: 0;
+    border-top: calc-em(1px) solid $color-gray-light;
+    border-bottom: 0 solid $color-white;
+}
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+sub, sup {
+    position: relative;
+    font-size: 85%;
+    font-weight: bold;
+    line-height: 0;
+    vertical-align: baseline;
+    margin-left: calc-em(4px);
+}
+sup {
+    top: calc-em(-8px);
+}
+sub {
+    bottom: calc-em(-4px);
+}
+.uppercase {
+    text-transform: uppercase;
+}
+::selection {
+    color: $color-white;
+    background: $color-primary;
+}
+blockquote {
+    border-left: calc-em(4px) solid $color-gray-light;
+    margin-bottom: $spacing;
+    padding-left: $spacing;
+    padding-right: $spacing;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}

@@ -1,23 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>
-      MNML
+        MNML
     </title>
     <meta name="author" content="mrmrs">
     <meta name="description" content="minimal template to building reponsive websites with html5 and sass">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.min.css">
-  </head>
-  <body>
-    <!-- Replace this with your own content -->
-    <div style="display:table;table-layout:fixed:text-align:center;width:100%;height:100%;">
-      <p style="display:table-cell;height:100%;vertical-align:middle;text-align:center; width:100%;">
-        welcome to mnml<br><br>
-        <small>enjoy</small>
-      </p>
-    </div>
-  </body>
+</head>
+
+<body>
+    <header class="main-nav wrapper">
+        <div class="row">
+            <h1 class="fourth logo"><a href="/">Name of Website</a></h1>
+            <a href="#" class="menu btn fr"><img src="images/hamburger.svg" alt="Menu" height="24px" width="24px" class="fr">
+            </a>
+            <nav class="three-fourths">
+                <h4>Menu</h4>
+                <ul class="main-nav fr">
+                    <li><a href="#">menu 1</a>
+                    </li>
+                    <li><a href="#">menu 2</a>
+                    </li>
+                    <li><a href="#">menu 3</a>
+                    </li>
+                    <li><a href="#">menu 4</a>
+                    </li>
+                    <li><a href="#">menu 5</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main-content">
+        <section class="wrapper">
+            <div class="row">
+                <div class="full">
+                    <h2>Title</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus alias optio quam quisquam quos debitis ex earum temporibus blanditiis quidem, quia cumque, vitae minima. Ullam natus explicabo accusamus, quibusdam dolorum!
+                    </p>
+                </div>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="half">
+                        <label for="exampleEmailInput">Your email</label>
+                        <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+                    </div>
+                    <div class="half">
+                        <label for="exampleRecipientInput">Reason for contacting</label>
+                        <select>
+                            <option value="Option 1">Questions</option>
+                            <option value="Option 2">Admiration</option>
+                            <option value="Option 3">Can I get your number?</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="full">
+                        <label for="exampleMessage">Message</label>
+                        <textarea placeholder="Hi Dave …" id="exampleMessage"></textarea>
+                        <label class="fr">
+                            <input type="checkbox">
+                            <span class="label-body">Send a copy to yourself</span>
+                        </label>
+                        <input class="btn input-inline" type="submit" value="Submit">
+                    </div>
+            </form>
+            </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <section class="wrapper">
+            <div class="row">
+                <div class="full">
+                    <hr>
+                    <p class="small nospace">&copy; 2014 All rights reserved.</p>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
 </html>

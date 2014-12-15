@@ -1,0 +1,75 @@
+.fl, .alignleft {
+    float: left;
+}
+.fr, .alignright {
+    float: right;
+}
+.fn, .aligncenter {
+    float: none;
+    text-align: center;
+    display: block;
+}
+.hidetext {
+    overflow: hidden;
+    text-indent: -999em;
+    display: block;
+}
+.nospace {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.mt0 {
+    margin-top: 0;
+}
+.mb0 {
+    margin-bottom: 0;
+}
+.mt {
+    margin-top: $spacing;
+}
+.mb {
+    margin-bottom: $spacing;
+}
+.mbs {
+    margin-bottom: calc-em(8px);
+}
+.mbl {
+    margin-bottom: calc-em(32px);
+}
+.mr {
+    margin-right: $spacing;
+}
+.mrs {
+    margin-right: calc-em(8px);
+}
+.mrl {
+    margin-right: calc-em(32px);
+}
+.pt0 {
+    padding-top: 0;
+}
+.pb0 {
+    padding-bottom: 0;
+}
+.pt {
+    padding-top: $spacing;
+}
+.pts {
+    padding-top: calc-em(8px);
+}
+.ptl {
+    padding-top: calc-em(32px);
+}
+.pb {
+    padding-bottom: $spacing;
+}
+.pbs {
+    padding-bottom: calc-em(8px);
+}
+.pbl {
+    padding-bottom: calc-em(32px);
+}
+[hidden], .hidden {
+    display: none;
+    visibility: hidden;
+}

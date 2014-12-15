@@ -1,0 +1,40 @@
+main {
+    -webkit-transition: -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out;
+}
+.main-nav nav {
+    display: none;
+}
+.menu {
+    fill: $color-white;
+}
+.navdrawer-container {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #5d80a8;
+    color: #fefefe;
+    -webkit-transform: translate(-250px, 0);
+    transform: translate(-250px, 0);
+    overflow-y: auto;
+}
+.navdrawer-container.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+@include break(medium-and-large) {
+    ul.main-nav {
+        @extend .list-inline;
+    }
+}
+@include break(large) {
+    .menu, nav h4 {
+        display: none !important;
+    }
+    .main-nav nav {
+        display: block;
+    }
+}
