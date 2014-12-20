@@ -1,10 +1,8 @@
-# MNML
+# KUI
 
 ## What is this?
 
-View the project page at [http://mn-ml.cc](http://mn-ml.cc "MNML - A light-weight responsive html5 boilerplate.")
-
-MNML is a starting point for prototyping responsive HTML5 SASS projects.
+KUI is a starting point for prototyping responsive HTML5 SASS projects.
 Uses gulp to create a dev environment for rapidly prototyping sites. 
 
 ## Features
@@ -55,35 +53,20 @@ every time you save a file.
 ```bash
 git push origin master
 ```
-
-## Directory structure
-```
-    mnml/
-        ├── README.md
-        ├── gulpfile.js
-        ├── package.json
-        ├── index.html                
-        ├── css
-        │   └── mnml.css              (10kb / 3.04 gzipped)
-        │   └── mnml.min.css          (2.27 kb minified - 989B gzipped)
-        └── sass                      CSS source files
-            ├── _normalize.scss
-            ├── _variables.scss
-            ├── _base.scss
-            ├── _type.scss
-            ├── _styles.scss
-            └── mnml.scss
-```
-
-# Author
-
+# Inspired by:
 [MRMRS](http://mrmrs.io "Adam Morse - Designer Developer")
+[kraken](https://github.com/cferdinandi/kraken)
+[web-starter-kit](https://github.com/google/web-starter-kit)
+
+```
+#Author
+[hirekris](http://hirekris.com "Kristoffer Hebert - Developer")
 
 # License
 
 The MIT License (MIT)
 
-Copyright (c) 2014 @mrmrs
+Copyright (c) 2014 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
