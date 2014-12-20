@@ -413,7 +413,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #272727;
-  background: #ffffff;
+  background: #272727;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -452,17 +452,17 @@ dl {
 dt {
   font-weight: bold; }
 
-.list-unstyled {
+.list-unstyled, .menu {
   margin-left: 0;
   list-style: none; }
 
-.list-inline, ul.main-nav {
+.list-inline, .menu {
   list-style: none;
   margin-left: 0;
   margin-right: 0;
   padding: 0; }
 
-.list-inline > li, .list-inline > ul.main-nav, .main-nav li {
+.list-inline li, .list-inline .menu {
   display: inline-block;
   margin-right: 0.5em; }
 
@@ -669,39 +669,65 @@ button, .btn {
 input.btn {
   height: inherit; }
 
-main {
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out; }
+body.expanded {
+  left: -15em;
+  position: relative; }
 
 .main-nav nav {
   display: none; }
 
-.menu {
-  fill: #ffffff; }
+body.expanded .main-nav nav {
+  display: block; }
 
-.navdrawer-container {
+main {
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out; }
+
+body.expanded .navdrawer-container {
   z-index: 1;
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 250px;
+  right: -15em;
+  width: 15em;
   height: 100%;
-  background-color: #5d80a8;
+  background-color: #00334d;
   color: #fefefe;
-  -webkit-transform: translate(-250px, 0);
-  -ms-transform: translate(-250px, 0);
-  transform: translate(-250px, 0);
+  -webkit-transform: translate(-15em, 0);
+  -ms-transform: translate(-15em, 0);
+  transform: translate(-15em, 0);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
   overflow-y: auto; }
 
-.navdrawer-container.open {
+.navdrawer-container.expanded {
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0); }
 
+body.expanded .menu li a {
+  width: 100%;
+  display: block;
+  padding: 0.875em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  border-top: 1px solid #4dc3ff; }
+
+body.expanded .menu li a:hover, body.expanded .menu li a:active {
+  color: #ffffff;
+  background: #4dc3ff; }
+
 @media screen and (min-width: 32em) { }
 
 @media screen and (min-width: 48em) {
-  .menu, nav h4 {
+  nav .menu {
+    float: right; }
+  .menu li {
+    display: inline-block;
+    margin-right: 0.5em; }
+  .menu-icon, nav h4 {
     display: none !important; }
   .main-nav nav {
     display: block; } }
@@ -717,12 +743,18 @@ main {
    - Large
    ========================================================================== */
 .logo a {
-  background: url('../images/logo.png') no-repeat;
+  background: url('../images/logo.png') no-repeat top center;
   -webkit-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  display: block; }
+
+.fourth.logo {
+  width: auto; }
+
+.main-nav, .main-content {
+  background: #ffffff; }
 
 .main-footer {
-  background: #272727;
   color: #ffffff; }
 
 /* Medium and Up - Targets everything larger than mobile
@@ -735,7 +767,9 @@ main {
 
 /* Large - only targets 2nd breakpoint.
    ========================================================================== */
-@media screen and (min-width: 48em) { }
+@media screen and (min-width: 48em) {
+  .fourth.logo {
+    width: 25%; } }
 
 .fl, .logo, .alignleft {
   float: left; }
@@ -753,7 +787,7 @@ main {
   text-indent: -999em;
   display: block; }
 
-.nospace {
+.nospace, body.expanded .navdrawer-container {
   padding: 0 !important;
   margin: 0 !important; }
 
@@ -765,6 +799,12 @@ main {
 
 .mt {
   margin-top: 1.5625em; }
+
+.mts {
+  margin-top: 0.5em; }
+
+.mtl {
+  margin-top: 2em; }
 
 .mb {
   margin-bottom: 1.5625em; }
@@ -783,6 +823,15 @@ main {
 
 .mrl {
   margin-right: 2em; }
+
+.ml {
+  margin-left: 1.5625em; }
+
+.mls {
+  margin-left: 0.5em; }
+
+.mll {
+  margin-left: 2em; }
 
 .pt0, .logo {
   padding-top: 0; }

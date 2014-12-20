@@ -27,6 +27,12 @@
 .mt {
     margin-top: $spacing;
 }
+.mts {
+    margin-top: calc-em(8px);
+}
+.mtl {
+    margin-top: calc-em(32px);
+}
 .mb {
     margin-bottom: $spacing;
 }
@@ -44,6 +50,15 @@
 }
 .mrl {
     margin-right: calc-em(32px);
+}
+.ml {
+    margin-left: $spacing;
+}
+.mls {
+    margin-left: calc-em(8px);
+}
+.mll {
+    margin-left: calc-em(32px);
 }
 .pt0 {
     padding-top: 0;

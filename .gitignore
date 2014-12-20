@@ -3,4 +3,4 @@ node_modules
 lib
 kui.sublime-workspace
 kui.sublime-project
-*.log
+npm-debug.log

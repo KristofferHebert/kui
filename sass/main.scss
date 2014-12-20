@@ -1,6 +1,5 @@
 @import "lib/normalize";
 @import "mixins";
-@import "debug";
 
 @import "config";
 @import "queries";
@@ -13,5 +12,5 @@
 @import "menu";
 
 // Add your custom styles to this file
-@import "styles";
-@import "misc";
+@import "custom";
+@import "helpers";

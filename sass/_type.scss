@@ -10,7 +10,7 @@ body {
     font-size: $font-size-base;
     line-height: 1.5;
     color: $color-black;
-    background: $color-white;
+    background: $color-black;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -74,7 +74,7 @@ dt {
   padding: 0;
 }
 
-.list-inline > li, .main-nav li {
+.list-inline li {
   display: inline-block;
   margin-right: calc-em(8px);
 }
