@@ -54,12 +54,12 @@ every time you save a file.
 git push origin master
 ```
 # Inspired by:
-[MRMRS](http://mrmrs.io "Adam Morse - Designer Developer")
-[kraken](https://github.com/cferdinandi/kraken)
-[web-starter-kit](https://github.com/google/web-starter-kit)
+* [MRMRS](http://mrmrs.io "Adam Morse - Designer Developer")
+* [kraken](https://github.com/cferdinandi/kraken)
+* [web-starter-kit](https://github.com/google/web-starter-kit)
 
 ```
-#Author
+# Author
 [hirekris](http://hirekris.com "Kristoffer Hebert - Developer")
 
 # License
