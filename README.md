@@ -10,7 +10,9 @@ Uses gulp to create a dev environment for rapidly prototyping sites.
 * sass compilation
 * css minification
 * css linting
-* autoprefixer (automatically adds appropriate vendor prefixes) 
+* autoprefixer (automatically adds appropriate vendor prefixes)
+* responsive off canvas menu
+* reponsive grids
 * browser reload on filesave
 * local server for serving a static site
 
