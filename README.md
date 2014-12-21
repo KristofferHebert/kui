@@ -58,7 +58,6 @@ git push origin master
 * [kraken](https://github.com/cferdinandi/kraken)
 * [web-starter-kit](https://github.com/google/web-starter-kit)
 
-```
 # Author
 [hirekris](http://hirekris.com "Kristoffer Hebert - Developer")
 
