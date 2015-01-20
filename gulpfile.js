@@ -11,58 +11,94 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     sass = require('gulp-sass'),
     csslint = require('gulp-csslint'),
+    plumber = require('gulp-plumber'),
     browserSync = require('browser-sync'),
     browserReload = browserSync.reload;
 
 
 // Minify all css files in the css directory
 // Run this in the root directory of the project with `gulp minify-css `
-gulp.task('minify-css', function(){
-  gulp.src('./css/main.css')
-    .pipe(minifyCSS())
-    .pipe(rename('main.min.css'))
-    .pipe(size({gzip:true, showFiles: true}))
-    .pipe(gulp.dest('./css/'));
+gulp.task('minify-css', function() {
+    gulp.src('./css/main.css')
+        .pipe(minifyCSS())
+        .pipe(rename('main.min.css'))
+        .pipe(size({
+            gzip: true,
+            showFiles: true
+        }))
+        .pipe(gulp.dest('./css/'));
 });
 
-gulp.task('minify-img', function(){
-  gulp.src('./img/*')
-    .pipe(imagemin({
-        progressive: true,
-        svgoPlugins: [{removeViewBox: false}],
-    }))
-    .pipe(gulp.dest('./img/'));
+gulp.task('minify-img', function() {
+    gulp.src('./img/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{
+                removeViewBox: false
+            }],
+        }))
+        .pipe(gulp.dest('./img/'));
 });
 
 // Use csslint without box-sizing or compatible vendor prefixes (these
 // don't seem to be kept up to date on what to yell about)
-gulp.task('csslint', function(){
-  gulp.src('./css/main.css')
-    .pipe(csslint({
-          'compatible-vendor-prefixes': false,
-          'box-sizing': false,
-          'important': false,
-          'known-properties': false
+gulp.task('csslint', function() {
+    gulp.src('./css/main.css')
+        .pipe(csslint({
+            'compatible-vendor-prefixes': false,
+            'box-sizing': false,
+            'important': false,
+            'known-properties': false
         }))
-    .pipe(csslint.reporter());
+        .pipe(csslint.reporter());
 });
 
 // Task that compiles scss files down to good old css
-gulp.task('pre-process', function(){
-  gulp.src('./sass/main.scss')
-      .pipe(watch(function(files) {
-        return files.pipe(sass())
-          .pipe(prefix())
-          .pipe(size({gzip: false, showFiles: true}))
-          .pipe(size({gzip: true, showFiles: true}))
-          .pipe(gulp.dest('css'))
-          .pipe(minifyCSS())
-          .pipe(rename('main.min.css'))
-          .pipe(size({gzip: false, showFiles: true}))
-          .pipe(size({gzip: true, showFiles: true}))
-          .pipe(gulp.dest('./css/'))
-          .pipe(browserSync.reload({stream:true}));
-      }));
+gulp.task('pre-process', function() {
+
+    var onError = function(err) {
+        notify.onError({
+            title: "Gulp",
+            subtitle: "Failure!",
+            message: "Error: <%= error.message %>",
+            sound: "Beep"
+        })(err);
+
+        this.emit('end');
+    };
+
+
+    gulp.src('./sass/main.scss')
+        .pipe(watch(function(files) {
+            return files.pipe(plumber({
+                      errorHandler: onError
+                }))
+                .pipe(sass())
+                .pipe(prefix())
+                .pipe(size({
+                    gzip: false,
+                    showFiles: true
+                }))
+                .pipe(size({
+                    gzip: true,
+                    showFiles: true
+                }))
+                .pipe(gulp.dest('css'))
+                .pipe(minifyCSS())
+                .pipe(rename('main.min.css'))
+                .pipe(size({
+                    gzip: false,
+                    showFiles: true
+                }))
+                .pipe(size({
+                    gzip: true,
+                    showFiles: true
+                }))
+                .pipe(gulp.dest('./css/'))
+                .pipe(browserSync.reload({
+                    stream: true
+                }));
+        }));
 });
 
 // Initialize browser-sync which starts a static server also allows for
@@ -76,7 +112,7 @@ gulp.task('browser-sync', function() {
 });
 
 // Function to call for reloading browsers
-gulp.task('bs-reload', function () {
+gulp.task('bs-reload', function() {
     browserSync.reload();
 });
 
@@ -88,10 +124,9 @@ gulp.task('bs-reload', function () {
  • Reloads browsers when you change html or sass files
 
 */
-gulp.task('default', ['pre-process', 'bs-reload', 'browser-sync'], function(){
-  gulp.start('pre-process', 'csslint', 'minify-img');
-  gulp.watch('sass/*.scss', ['pre-process']);
-  gulp.watch('css/main.css', ['bs-reload']);
-  gulp.watch('*.html', ['bs-reload']);
+gulp.task('default', ['pre-process', 'bs-reload', 'browser-sync'], function() {
+    gulp.start('pre-process', 'csslint', 'minify-img');
+    gulp.watch('sass/*.scss', ['pre-process']);
+    gulp.watch('css/main.css', ['bs-reload']);
+    gulp.watch('*.html', ['bs-reload']);
 });
-

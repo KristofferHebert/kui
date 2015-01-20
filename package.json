@@ -39,5 +39,8 @@
     "csslint": "gulp csslint",
     "minify-css": "gulp minify-css",
     "images": "gulp minify-img"
+  },
+  "dependencies": {
+    "gulp-plumber": "^0.6.6"
   }
 }

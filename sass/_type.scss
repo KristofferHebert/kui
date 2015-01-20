@@ -44,7 +44,7 @@ ul,
 ol,
 dl {
   margin-bottom: $spacing;
-  margin-left: calc-em(32px);
+  margin-left: calc-em(8px);
 }
 
 ul ul,
@@ -106,7 +106,7 @@ h3, .f3, h4, .f4, h5, .f5 {
     margin-bottom: .1em;
 }
 h4, .f4, h5, .f5 {
-    font-size: calc-em(22px);
+    font-size: calc-em(18px);
 }
 
 small, .small {
@@ -141,10 +141,7 @@ sub {
 .uppercase {
     text-transform: uppercase;
 }
-::selection {
-    color: $color-white;
-    background: $color-primary;
-}
+
 blockquote {
     border-left: calc-em(4px) solid $color-gray-light;
     margin-bottom: $spacing;

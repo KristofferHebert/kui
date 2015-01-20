@@ -36,8 +36,19 @@ body.expanded .navdrawer-container {
 .menu {
     @extend .list-unstyled;
 }
+.menu .btn {
+    @extend .mls;
+    @extend .mrs;
+}
+.menu-icon.btn
+{
+  margin-right: 0;
+}
+.menu-icon img {
+    width: 24px;
+    height: 24px;
+}
 body.expanded .menu li a {
-    width: 100%;
     display: block;
     padding: calc-em(14px);
     -webkit-box-sizing: border-box;
@@ -60,6 +71,13 @@ body.expanded .menu li a:hover, body.expanded .menu li a:active {
     .menu li {
         display: inline-block;
         margin-right: calc-em(8px);
+    }
+    .menu li:last-child {
+      margin-right: 0;
+    }
+    ul.menu .btn {
+        margin-left: 0;
+        margin-right: 0;
     }
     .menu-icon, nav h4 {
         display: none !important;
