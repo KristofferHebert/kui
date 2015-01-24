@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     csslint = require('gulp-csslint'),
     plumber = require('gulp-plumber'),
+    notify = require('gulp-notify'),
     browserSync = require('browser-sync'),
     browserReload = browserSync.reload;
 
@@ -60,10 +61,8 @@ gulp.task('pre-process', function() {
         notify.onError({
             title: "Gulp",
             subtitle: "Failure!",
-            message: "Error: <%= error.message %>",
-            sound: "Beep"
+            message: "Error: <%= error.message %>"
         })(err);
-
         this.emit('end');
     };
 
@@ -71,7 +70,7 @@ gulp.task('pre-process', function() {
     gulp.src('./sass/main.scss')
         .pipe(watch(function(files) {
             return files.pipe(plumber({
-                      errorHandler: onError
+                    errorHandler: onError
                 }))
                 .pipe(sass())
                 .pipe(prefix())

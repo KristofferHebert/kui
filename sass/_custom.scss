@@ -22,7 +22,11 @@
 .fourth.logo {
     width: auto;
 }
-.main-nav, .main-content {
+.main-nav {
+    background: $color-gray-light;
+}
+
+.main-content {
     background: $color-white;
 }
 .main-footer {

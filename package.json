@@ -41,6 +41,7 @@
     "images": "gulp minify-img"
   },
   "dependencies": {
+    "gulp-notify": "^2.1.0",
     "gulp-plumber": "^0.6.6"
   }
 }

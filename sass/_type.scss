@@ -44,7 +44,8 @@ ul,
 ol,
 dl {
   margin-bottom: $spacing;
-  margin-left: calc-em(8px);
+  margin-left: calc-em(4px);
+  padding-left: calc-em(24px) ;
 }
 
 ul ul,
@@ -154,4 +155,8 @@ blockquote, q {
 blockquote:before, blockquote:after, q:before, q:after {
     content: '';
     content: none;
+}
+
+main pre[class*=language-]>code[data-language] {
+  overflow: auto;
 }

@@ -443,7 +443,8 @@ a:hover img {
  */
 ul, ol, dl {
   margin-bottom: 1.5625em;
-  margin-left: 0.5em; }
+  margin-left: 0.25em;
+  padding-left: 1.5em; }
 
 ul ul, ul ol, ol ol, ol ul {
   margin-bottom: 0; }
@@ -539,6 +540,80 @@ blockquote, q {
 blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none; }
+
+main pre[class*=language-] > code[data-language] {
+  overflow: auto; }
+
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+code[class*="language-"], pre[class*="language-"] {
+  color: #f8f8f2;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.3);
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto; }
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background: #272822; }
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em; }
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+  color: slategray; }
+
+.token.punctuation {
+  color: #f8f8f2; }
+
+.namespace {
+  opacity: 0.7; }
+
+.token.property, .token.tag {
+  color: #f92672; }
+
+.token.boolean, .token.number {
+  color: #ae81ff; }
+
+.token.selector, .token.attr-name, .token.string {
+  color: #a6e22e; }
+
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
+  color: #f8f8f2; }
+
+.token.atrule, .token.attr-value {
+  color: #e6db74; }
+
+.token.keyword {
+  color: #f92672; }
+
+.token.regex, .token.important {
+  color: #fd971f; }
+
+.token.important {
+  font-weight: bold; }
+
+.token.entity {
+  cursor: help; }
 
 form, fieldset {
   margin-bottom: 1.5625em; }
@@ -699,7 +774,7 @@ body.expanded .navdrawer-container {
   -ms-transform: translate(0, 0);
   transform: translate(0, 0); }
 
-.menu-icon.btn {
+a.menu-icon.btn {
   margin-right: 0; }
 
 .menu-icon img {
@@ -744,13 +819,13 @@ body.expanded .menu li a:hover, body.expanded .menu li a:active {
 .mt0 {
   margin-top: 0; }
 
-.mb0, .logo {
+.mb0, .menu .btn, .logo {
   margin-bottom: 0; }
 
 .mt {
   margin-top: 1.5625em; }
 
-.mts {
+.mts, .menu, a.menu-icon.btn {
   margin-top: 0.5em; }
 
 .mtl {
@@ -759,7 +834,7 @@ body.expanded .menu li a:hover, body.expanded .menu li a:active {
 .mb {
   margin-bottom: 1.5625em; }
 
-.mbs {
+.mbs, .menu, a.menu-icon.btn {
   margin-bottom: 0.5em; }
 
 .mbl {
@@ -847,7 +922,10 @@ body.expanded .menu li a:hover, body.expanded .menu li a:active {
 .fourth.logo {
   width: auto; }
 
-.main-nav, .main-content {
+.main-nav {
+  background: #e5e5e5; }
+
+.main-content {
   background: #ffffff; }
 
 .main-footer {
@@ -921,3 +999,30 @@ body.expanded .menu li a:hover, body.expanded .menu li a:active {
 [hidden], .hidden {
   display: none;
   visibility: hidden; }
+
+.tar {
+  text-align: right; }
+
+.tal {
+  text-align: left; }
+
+.desktop-only, .tablet-only {
+  display: none; }
+
+@media screen and (min-width: 32em) {
+  .mobile-only {
+    display: none; } }
+
+/* Medium - only targets 1st breakpoint. Styles
+   ========================================================================== */
+@media screen and (min-width: 32em) and (max-width: 48em) {
+  .tablet-only {
+    display: block; } }
+
+/* Large - only targets 2nd breakpoint.
+   ========================================================================== */
+@media screen and (min-width: 48em) {
+  .desktop-only {
+    display: block; }
+  .mobile-tablet-only {
+    display: none; } }

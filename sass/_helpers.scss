@@ -55,3 +55,42 @@
     display: none;
     visibility: hidden;
 }
+.tar {
+  text-align: right;
+}
+.tal {
+  text-align: left;
+}
+.desktop-only, .tablet-only {
+  display: none;
+}
+
+
+@include break(medium-and-large) {
+    .mobile-only {
+      display: none;
+    }
+}
+/* Medium - only targets 1st breakpoint. Styles
+   ========================================================================== */
+
+@include break(medium) {
+    .tablet-only {
+      display: block;
+    }
+
+}
+/* Large - only targets 2nd breakpoint.
+   ========================================================================== */
+
+@include break(large) {
+    .desktop-only {
+      display: block;
+    }
+    .mobile-tablet-only {
+      display: none;
+    }
+}
+
+
+

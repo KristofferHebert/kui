@@ -35,14 +35,20 @@ body.expanded .navdrawer-container {
 }
 .menu {
     @extend .list-unstyled;
+    @extend .mts;
+    @extend .mbs;
+
 }
 .menu .btn {
     @extend .mls;
     @extend .mrs;
+    @extend .mb0;
 }
-.menu-icon.btn
+a.menu-icon.btn
 {
   margin-right: 0;
+  @extend .mts;
+  @extend .mbs;
 }
 .menu-icon img {
     width: 24px;
