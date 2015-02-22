@@ -21,7 +21,7 @@ Uses gulp to create a dev environment for rapidly prototyping sites.
 * Create a new repo for your project on Github
 * In terminal run
 ```bash
-    git clone git@github.com:mrmrs/mnml.git yourNewRepoName
+    git clone git@github.com:hirekris/kui.git yourNewRepoName
     cd yourNewRepoName
     rm -rf .git
     git init
