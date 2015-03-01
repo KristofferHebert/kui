@@ -9,11 +9,9 @@ $color-primary-light: lighten($color-primary, 25%);
 $color-secondary: #0044cc;
 $color-secondary-dark: darken($color-secondary, 25%);
 $color-secondary-light: lighten($color-secondary, 25%);
-
 $color-success: #377f31; // Green
 $color-danger: #880e14; // Red
 $color-warning: #dba909; // Yellow
-
 $color-black: #272727;
 $color-white: #ffffff;
 $color-gray-dark: #808080;
@@ -22,14 +20,14 @@ $color-gray-light: #e5e5e5;
 // Font Stacks
 $font-primary: "Helvetica Neue", Arial, sans-serif;
 $font-secondary: Georgia, Times, serif;
-
 $font-size-base: 100%;
 
+// Spacing
 $spacing-small: calc-em(10px);
 $spacing: calc-em(20px);
 $spacing-large: calc-em(40px);
 
-
+// Grid settings
 $container-width: 90%;
 $container-max-width: calc-em(960px);
 $grid-margins: 1.4%;
@@ -42,5 +40,5 @@ $grid-sizes: (
   full 100%
 );
 
-
+// Rounded corner settings
 $radius: calc-em(5px);

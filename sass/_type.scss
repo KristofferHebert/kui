@@ -27,60 +27,45 @@ a:hover, a:focus, a:active {
     color: darken( $color-primary, 15%);
     text-decoration: underline;
 }
-
 a:hover img {
-  border: none;
-  background: none;
-  opacity: 0.8;
-  filter: alpha(opacity=80);
+    border: none;
+    background: none;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
 }
-
-
 /**
  * List styling
  */
 
-ul,
-ol,
+ul, ol, dl {
+    margin-bottom: $spacing;
+    margin-left: calc-em(4px);
+    padding-left: calc-em(24px);
+}
+ul ul, ul ol, ol ol, ol ul {
+    margin-bottom: 0;
+}
 dl {
-  margin-bottom: $spacing;
-  margin-left: calc-em(4px);
-  padding-left: calc-em(24px) ;
+    margin-left: 0;
 }
-
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin-bottom: 0;
-}
-
-dl {
-  margin-left: 0;
-}
-
 dt {
-  font-weight: bold;
+    font-weight: bold;
 }
-
 .list-unstyled {
-  margin-left: 0;
-  list-style: none;
+    margin-left: 0;
+    list-style: none;
+    padding-left: 0;
 }
-
 .list-inline {
-  list-style: none;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0;
+    list-style: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
 }
-
 .list-inline li {
-  display: inline-block;
-  margin-right: calc-em(8px);
+    display: inline-block;
+    margin-right: calc-em(8px);
 }
-
-
 /* Type Scale
    ========================================================================== */
 
@@ -96,19 +81,18 @@ h1, h2, h3, h4, h5, h6 {
 h1, .f1 {
     font-size: calc-em(32px);
 }
-h2, .f2, h3, .f3{
+h2, .f2, h3, .f3 {
     font-size: calc-em(28px);
 }
 h3, .f3 {
     font-size: calc-em(24px);
 }
 h3, .f3, h4, .f4, h5, .f5 {
-    margin-bottom: .1em;
+    margin-bottom: .2em;
 }
 h4, .f4, h5, .f5 {
     font-size: calc-em(18px);
 }
-
 small, .small {
     font-size: calc-em(16px);
 }
@@ -141,7 +125,9 @@ sub {
 .uppercase {
     text-transform: uppercase;
 }
-
+.capitalize {
+    text-transform: capitalize;
+}
 blockquote {
     border-left: calc-em(4px) solid $color-gray-light;
     margin-bottom: $spacing;
@@ -155,7 +141,6 @@ blockquote:before, blockquote:after, q:before, q:after {
     content: '';
     content: none;
 }
-
 main pre[class*=language-]>code[data-language] {
-  overflow: auto;
+    overflow: auto;
 }

@@ -452,7 +452,8 @@ dt {
 
 .list-unstyled, .menu {
   margin-left: 0;
-  list-style: none; }
+  list-style: none;
+  padding-left: 0; }
 
 .list-inline, .menu {
   list-style: none;
@@ -485,7 +486,7 @@ h3, .f3 {
   font-size: 1.5em; }
 
 h3, .f3, h4, .f4, h5, .f5 {
-  margin-bottom: 0.1em; }
+  margin-bottom: 0.2em; }
 
 h4, .f4, h5, .f5 {
   font-size: 1.125em; }
@@ -521,6 +522,9 @@ sub {
 
 .uppercase {
   text-transform: uppercase; }
+
+.capitalize {
+  text-transform: capitalize; }
 
 blockquote {
   border-left: 0.25em solid #e5e5e5;
@@ -990,23 +994,25 @@ body.expanded .menu li a:hover, body.expanded .menu li a:active {
 .tal {
   text-align: left; }
 
-.desktop-only, .tablet-only {
+.desktop-only, .tablet-only, .tablet-desktop-only {
   display: none; }
 
 @media screen and (min-width: 32em) {
   .mobile-only {
-    display: none; } }
+    display: none !important; }
+  .tablet-desktop-only {
+    display: block !important; } }
 
 /* Medium - only targets 1st breakpoint. Styles
    ========================================================================== */
 @media screen and (min-width: 32em) and (max-width: 48em) {
   .tablet-only {
-    display: block; } }
+    display: block !important; } }
 
 /* Large - only targets 2nd breakpoint.
    ========================================================================== */
 @media screen and (min-width: 48em) {
   .desktop-only {
-    display: block; }
+    display: block !important; }
   .mobile-tablet-only {
-    display: none; } }
+    display: none !important; } }
