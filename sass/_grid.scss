@@ -1,16 +1,13 @@
 .wrapper {
     width: $container-width;
     max-width: $container-max-width;
-    box-sizing: border-box;
-}
-.wrapper,{
     margin-left: auto;
     margin-right: auto;
 }
 .row {
     width: 100%;
-    margin-left: $grid-margins * -1;
-    margin-right: $grid-margins * -1;
+    padding-left: $grid-margins * -1;
+    padding-right: $grid-margins * -1;
 }
 %grid-base {
     width: 100%;

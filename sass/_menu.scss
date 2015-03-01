@@ -9,46 +9,39 @@ body.expanded .main-nav nav {
     display: block;
 }
 main {
-    -webkit-transition: -webkit-transform .3s ease-out;
-    transition: transform .3s ease-out;
+
 }
 body.expanded .navdrawer-container {
     z-index: 1;
     position: fixed;
     top: 0;
     bottom: 0;
-    right: -15em;
+    right: 0;
     width: 15em;
     height: 100%;
-    background-color: $color-primary-dark;
+    background-color: $color-black;
     color: #fefefe;
-    -webkit-transform: translate(-15em, 0);
-    transform: translate(-15em, 0);
-    -webkit-transition: -webkit-transform .3s ease-out;
-    transition: transform .3s ease-out;
     overflow-y: auto;
     @extend .nospace;
 }
-.navdrawer-container.expanded {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
+.navdrawer-container h4 {
+    margin-left: calc-em(14px);
+    @extend .mt;
 }
 .menu {
     @extend .list-unstyled;
     @extend .mts;
     @extend .mbs;
-
 }
 .menu .btn {
     @extend .mls;
     @extend .mrs;
     @extend .mb0;
 }
-a.menu-icon.btn
-{
-  margin-right: 0;
-  @extend .mts;
-  @extend .mbs;
+a.menu-icon.btn {
+    margin-right: 0;
+    @extend .mts;
+    @extend .mbs;
 }
 .menu-icon img {
     width: 24px;
@@ -79,7 +72,7 @@ body.expanded .menu li a:hover, body.expanded .menu li a:active {
         margin-right: calc-em(8px);
     }
     .menu li:last-child {
-      margin-right: 0;
+        margin-right: 0;
     }
     ul.menu .btn {
         margin-left: 0;

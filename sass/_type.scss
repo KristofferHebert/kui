@@ -88,17 +88,16 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $font-secondary;
     line-height: 1.2;
     font-weight: normal;
-    margin: 0 0 1em;
-    padding: 1em 0 0;
+    margin: 0 0 $spacing-small;
+    padding: 0;
     word-wrap: break-word;
+    text-transform: capitalize;
 }
 h1, .f1 {
-    padding-top: .4em;
-    font-size: calc-em(48px);
+    font-size: calc-em(32px);
 }
 h2, .f2, h3, .f3{
-    font-size: calc-em(32px);
-    margin-bottom: .4em;
+    font-size: calc-em(28px);
 }
 h3, .f3 {
     font-size: calc-em(24px);

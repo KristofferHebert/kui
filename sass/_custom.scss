@@ -18,16 +18,18 @@
     background: url('../images/logo.png') no-repeat top center;
     background-size: cover;
     display: block;
+    height: 65px;
 }
 .fourth.logo {
-    width: auto;
+    width: 220px;
 }
 .main-nav {
     background: $color-gray-light;
 }
-
 .main-content {
     background: $color-white;
+    @extend .ptl;
+    @extend .pbl;
 }
 .main-footer {
     color: $color-white;

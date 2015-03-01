@@ -24,9 +24,14 @@ $font-primary: "Helvetica Neue", Arial, sans-serif;
 $font-secondary: Georgia, Times, serif;
 
 $font-size-base: 100%;
-$spacing: 1.5625em;
+
+$spacing-small: calc-em(10px);
+$spacing: calc-em(20px);
+$spacing-large: calc-em(40px);
+
+
 $container-width: 90%;
-$container-max-width: calc-em(1024px);
+$container-max-width: calc-em(960px);
 $grid-margins: 1.4%;
 $grid-sizes: (
   fourth 25%,
